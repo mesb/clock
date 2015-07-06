@@ -72,6 +72,7 @@ func (c *Counter) PlusHr() {
 	if c.hh == 23 {
 		c.hh = 0
 	}
+	c.hh++
 }
 
 /*
@@ -97,7 +98,7 @@ func printer(C chan Counter) {
   2. create a channel of type string, for sending and receiving ticks
   3. Create a Counter channel for sending and receiving counter objects
   4. Concurrently run counter/clock processes
-  5. Block the main function with an input operation.
+  5. Block the main function with an input operation
 */
 func main() {
 	ctr := &Counter{0, 0, 0}
