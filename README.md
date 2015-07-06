@@ -51,6 +51,13 @@ seconds of a clock.
 Also, it has methods that increment seconds, minutes, and hours.
 
 
+# Installation
+1. go get -u github.com/mesb/clock
+2. cd /path/to/clock --> Definitely in your workspace
+3. go build
+4. ./clock
+
 # References
 Communicating Sequential Processes, C.A.R Hoare
+
 Concurrency is Not Parallelism, Rob Pike
