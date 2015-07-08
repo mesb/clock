@@ -7,7 +7,7 @@ A simple clock application using go concurrency patterns
 
 # About this Application
 This application is a composition of independently executing processes that
-collectively simulate a toy clock. Its purpose is
+collectively simulate a toy clock. Its purpose is to 
 investigate and enable me understand go's concurrency primitives and patterns.
 
 # Technique
