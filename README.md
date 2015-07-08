@@ -15,6 +15,7 @@ investigate and enable me understand go's concurrency primitives and patterns.
 Recursion, in this application, is used to describe processes that run forever.
 
 tick(c chan string)
+
 updateCount(tick chan string, ctr *Counter, ctrChan chan Counter)
 
 2 recursive functions, running forever. The tick function is the actual "tick"
