@@ -19,7 +19,7 @@ import (
 func tick(c chan string) {
 	time.Sleep(time.Second * 1)
 	c <- "tock"
-	tick(c)
+	go tick(c)
 }
 
 /*
@@ -32,7 +32,7 @@ func updateCount(tick chan string, ctr *Counter, ctrChan chan Counter) {
 		ctr.plusSec()
 		ctrChan <- *ctr
 	}
-	updateCount(tick, ctr, ctrChan)
+	go updateCount(tick, ctr, ctrChan)
 }
 
 
@@ -89,7 +89,7 @@ func (c Counter) String() string{
 func printer(C chan Counter) {
 	c := <-C
 	fmt.Printf("%s \r", c)
-	printer(C)
+	go printer(C)
 }
 
 /*
